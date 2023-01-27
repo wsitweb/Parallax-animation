@@ -81,11 +81,11 @@ html, body {
 .parallax__rope {
   position: absolute;
   width: calc(var(--indexSize) * 100);
-  scale: 0.5;
-  opacity: 0;
-  left: calc(var(--indexSize) * -16);
-  transform: perspective(1500px) translate3d(0, 0, calc(var(--indexSize) * 6)) !important;
   transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  opacity: 0;
+  left: 50%;
+  transform: perspective(1500px) translate3d(-50%, 0, calc(var(--indexSize) * 1)) !important;
 }
 .parallax__rope img {
   width: 100%;
