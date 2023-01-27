@@ -1,0 +1,291 @@
+:root{
+  --indexSize: calc(1vh + 1vw);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+}
+
+.wrapper {
+  overflow: hidden;
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.wrapper.active {
+  opacity: 1;
+}
+.wrapper.active .parallax__wave {
+  opacity: 1;
+  transition: all 1s ease 1s;
+}
+.wrapper.active .parallax__rope {
+  opacity: 1;
+  transition: all 1s ease 1.8s;
+}
+.wrapper.active .parallax__litehouse {
+  bottom: 130px;
+  transition: all 0.8s ease 2.5s;
+} 
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+}
+.parallax {
+  flex: 1 0 100%;
+  position: relative;
+  overflow: hidden;
+}
+.parallax::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(var(--indexSize) * 4.5);
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 60%);
+}
+.parallax__list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.parallax li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.parallax__bg {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  left: -5%;
+  top: -5%;
+  background: url(../image/background.jpg) 50% 50%/cover no-repeat;
+}
+.parallax__rope {
+  position: absolute;
+  width: calc(var(--indexSize) * 100);
+  /* scale: 0.5;
+  left: -50%;
+  transform:  perspective(1500px) translate3d(50%, 0, calc(var(--indexSize) * 2)) !important;
+  opacity: 0; */
+  scale: 0.5;
+  left: calc(var(--indexSize) * -16);
+  transform: perspective(1500px) translate3d(0, 0, calc(var(--indexSize) * 6)) !important;
+  transform-origin: 50% 50%;
+}
+.parallax__rope img {
+  width: 100%;
+  object-fit: cover;
+}
+.parallax__rope_1 {
+  top: 5%;
+  transform: scale(1);
+}
+.parallax__rope_1 .parallax__element {
+  transform: scale(0.6);
+}
+.parallax__rope_2 {
+  top: -1.666%;
+  transform: scale(1.0555);
+}
+.parallax__rope_2 .parallax__element {
+  transform: scale(0.7555);
+}
+.parallax__rope_3 {
+  top: -11.666%;
+  transform: scale(1.13889);
+}
+.parallax__rope_3 .parallax__element {
+  transform: scale(0.9888);
+}
+.parallax__element {
+  position: absolute;
+}
+.parallax__element span {
+  display: inline-block;
+  transform-origin: 50% 0;
+  width: calc(var(--indexSize) * 10);
+  height: calc(var(--indexSize) * 10);
+  margin: 0 0 0 -140%;
+  -webkit-animation: swing 2s infinite alternate cubic-bezier(0.45, 0, 0.5, 0.9);
+          animation: swing 2s infinite alternate cubic-bezier(0.45, 0, 0.5, 0.9);
+}
+.parallax__element_1 {
+  top: calc(var(--indexSize) * 3);
+  left: 20%;
+}
+.parallax__element_1 span {
+  background: url(../image/clouds/board-cloud-2.png) 0 0/100% no-repeat;
+}
+.parallax__element_2 {
+  top: calc(var(--indexSize) * 4.8);
+  left: 30%;
+}
+.parallax__element_2 span {
+  background: url(../image/clouds/board-cloud-1.png) 0 0/100% no-repeat;
+}
+.parallax__element_3 {
+  top: calc(var(--indexSize) * 4.2);
+  left: 80%;
+}
+.parallax__element_3 span {
+  background: url(../image/clouds/board-birds.png) 0 0/100% no-repeat;
+}
+.parallax__element_4 {
+  top: calc(var(--indexSize) * 3.2);
+  left: 20%;
+}
+.parallax__element_4 span {
+  background: url(../image/clouds/board-cloud-1.png) 0 0/100% no-repeat;
+}
+.parallax__element_5 {
+  top: calc(var(--indexSize) * 7.1);
+  left: 50%;
+}
+.parallax__element_5 span {
+  background: url(../image/clouds/board-cloud-4.png) 0 0/100% no-repeat;
+}
+.parallax__element_6 {
+  top: calc(var(--indexSize) * 5.8);
+  left: 30%;
+}
+.parallax__element_6 span {
+  background: url(../image/clouds/board-birds.png) 0 0/100% no-repeat;
+}
+.parallax__element_7 {
+  top: calc(var(--indexSize) * 8.4);
+  left: 60%;
+}
+.parallax__element_7 span {
+  background: url(../image/clouds/board-cloud-2.png) 0 0/100% no-repeat;
+}
+.parallax__element_8 {
+  top: calc(var(--indexSize) * 7);
+  left: 80%;
+}
+.parallax__element_8 span {
+  background: url(../image/clouds/board-cloud-3.png) 0 0/100% no-repeat;
+}
+.parallax__wave {
+  position: absolute;
+  background: url(../image/waves/wave-plain.png) 0 0/auto 101% repeat-x;
+  right: -100%;
+  left: -100%;
+  opacity: 0;
+}
+.parallax__wave_1 {
+  bottom: calc(var(--indexSize) * 6.05);
+  height: calc(var(--indexSize) * 2.89);
+  -webkit-animation: wave 7.1s 0.1s infinite linear;
+          animation: wave 7.1s 0.1s infinite linear;
+  background: url(../image/waves/wave-paint.png) 0 0/auto 101% repeat-x;
+}
+.parallax__wave_2 {
+  bottom: calc(var(--indexSize) * 4.84);
+  height: calc(var(--indexSize) * 3.87);
+  -webkit-animation: wave 6.6s 0.1s infinite linear;
+          animation: wave 6.6s 0.1s infinite linear;
+}
+.parallax__wave_3 {
+  bottom: calc(var(--indexSize) * 3.63);
+  height: calc(var(--indexSize) * 4.84);
+  -webkit-animation: wave 6.2s 0.1s infinite linear;
+          animation: wave 6.2s 0.1s infinite linear;
+  background: url(../image/waves/wave-paint.png) 0 0/auto 101% repeat-x;
+}
+.parallax__litehouse {
+  background: url(../image/lighthouse.png) 0 0 / cover no-repeat;
+  width: calc(var(--indexSize) * 10.6);
+  height: calc(var(--indexSize) * 18.6);
+  position: absolute;
+  right: 12%;
+  bottom: -100%;
+  -webkit-animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.45, 0.03, 0.51, 0.95);
+          animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.45, 0.03, 0.51, 0.95);
+}
+.parallax__wave_4 {
+  bottom: calc(var(--indexSize) * 2.42);
+  height: calc(var(--indexSize) * 5.82);
+  -webkit-animation: wave 5.7s 0.1s infinite linear;
+          animation: wave 5.7s 0.1s infinite linear;
+}
+.parallax__wave_5 {
+  bottom: calc(var(--indexSize) * -0.04);
+  height: calc(var(--indexSize) * 7.73);
+  -webkit-animation: wave 4.8s 0.1s infinite linear;
+          animation: wave 4.8s 0.1s infinite linear;
+}
+.parallax__wave_6 {
+  bottom: calc(var(--indexSize) * -2.42);
+  height: calc(var(--indexSize) * 9.68);
+  -webkit-animation: wave 4.5s 0.1s infinite linear;
+          animation: wave 4.5s 0.1s infinite linear;
+  background: url(../image/waves/wave-paint.png) 0 0/auto 101% repeat-x;
+}
+
+@-webkit-keyframes swing {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@-webkit-keyframes wave {
+  0% {
+    transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+  }
+}
+@keyframes wave {
+  0% {
+    transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+  }
+}
+@-webkit-keyframes lighthouse {
+  0% {
+    transform: translate3d(15%, 0, 0) rotateZ(10deg);
+  }
+  100% {
+    transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+  }
+}
+@keyframes lighthouse {
+  0% {
+    transform: translate3d(15%, 0, 0) rotateZ(10deg);
+  }
+  100% {
+    transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+  }
+}
