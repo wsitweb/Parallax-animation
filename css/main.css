@@ -52,7 +52,7 @@ html, body {
   content: "";
   position: absolute;
   width: 100%;
-  height: calc(var(--indexSize) * 4.5);
+  height: calc(var(--indexSize) * 4.8);
   bottom: 0;
   background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 60%);
 }
@@ -73,19 +73,16 @@ html, body {
 .parallax__bg {
   position: absolute;
   width: 110%;
-  height: 110%;
+  height: 100%;
   left: -5%;
   top: -5%;
-  background: url(../image/background.jpg) 50% 50%/cover no-repeat;
+  background:url(../image/background.jpg) 50% 50%/cover no-repeat ;
 }
 .parallax__rope {
   position: absolute;
   width: calc(var(--indexSize) * 100);
-  /* scale: 0.5;
-  left: -50%;
-  transform:  perspective(1500px) translate3d(50%, 0, calc(var(--indexSize) * 2)) !important;
-  opacity: 0; */
   scale: 0.5;
+  opacity: 0;
   left: calc(var(--indexSize) * -16);
   transform: perspective(1500px) translate3d(0, 0, calc(var(--indexSize) * 6)) !important;
   transform-origin: 50% 50%;
