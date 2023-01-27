@@ -30,7 +30,7 @@ html, body {
   transition: all 1s ease 1.8s;
 }
 .wrapper.active .parallax__litehouse {
-  bottom: 130px;
+  bottom: calc(var(--indexSize) * 3);
   transition: all 0.8s ease 2.5s;
 } 
 .page {
