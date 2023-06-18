@@ -48,14 +48,14 @@ html, body {
   position: relative;
   overflow: hidden;
 }
-.parallax::after {
+/* .parallax::after {
   content: "";
   position: absolute;
   width: 100%;
   height: calc(var(--indexSize) * 4.8);
   bottom: 0;
   background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 60%);
-}
+} */
 .parallax__list {
   position: absolute;
   width: 100%;
@@ -84,6 +84,7 @@ html, body {
   opacity: 0;
   left: calc((var(--indexSize) * 100 - 100vw) / 2 * -1);
 }
+
 .parallax__rope img {
   width: 100%;
   object-fit: cover;
@@ -183,6 +184,14 @@ html, body {
   right: -100%;
   left: -100%;
   opacity: 0;
+}
+.parallax__wave-shadow{
+  position: absolute;
+  width: 300%;
+  left: -100%;
+  height: calc(var(--indexSize) * 8.8);
+  bottom: -10%;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 60%);
 }
 .parallax__wave_1 {
   bottom: calc(var(--indexSize) * 6.05);
