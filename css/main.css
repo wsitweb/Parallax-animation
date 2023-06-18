@@ -189,9 +189,10 @@ html, body {
   position: absolute;
   width: 300%;
   left: -100%;
-  height: calc(var(--indexSize) * 8.8);
-  bottom: -10%;
-  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 60%);
+  height: 50%;
+  bottom: -40%;
+  /* background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 60%); */
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(11, 145, 46) 60%);
 }
 .parallax__wave_1 {
   bottom: calc(var(--indexSize) * 6.05);
